@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Botão Fujão" content="Coisa pra ela passar raiva">
+    <title>Pedido irrecusável</title>
+
+    <style>
+        body {
+            background-color: rgb(177, 134, 150);
+        }
+
+
+        .painel {
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.466);
+            width: 500px;
+            height: 550px;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        #sim {
+            width: 60px;
+            height: 40px;
+            background-color: rgb(255, 0, 55);
+            border: white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -170px;
+        }
+
+        #nao {
+            position: absolute;
+            margin-left: 100px;
+            width: 60px;
+            height: 40px;
+            background-color: rgb(255, 0, 55);
+            border: white;
+            border-radius: 10px;
+            color: white;
+        }
+
+        img {
+            border-radius: 10px;
+            padding-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="painel">
+
+        <h1> Amor, eu te amo muito!!! </h1>
+
+        <img src="https://i.pinimg.com/originals/fc/a6/08/fca608525699df213af65a7748062b04.gif" alt="">
+
+        <h5> Me faz um pix? </h5>
+
+        <a href="https://www.youtube.com/watch?v=r9Jy5mAhzf8&pp=ygUgb2JyaWdhZG8gYW1pZ28gdm9jw6ogw6kgdW0gYW1pZ28%3D">
+            <button id="sim"> Sim! </button> </a>
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+    </div>
+
+    <script>
+        function fuja() {
+            var botaoNao = document.getElementById("nao")
+
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+
+</body>
+
+</html>
